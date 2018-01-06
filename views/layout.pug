@@ -1,0 +1,56 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='../../../../favicon.ico')
+    title Justified Nav Template for Bootstrap
+    // Bootstrap core CSS
+    link(href='/stylesheets/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='/stylesheets/justified-nav.css', rel='stylesheet')
+  body
+    .container
+      header.masthead
+        h3.text-muted Project name
+        nav.navbar.navbar-expand-md.navbar-light.bg-light.rounded.mb-3
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarCollapse.collapse.navbar-collapse
+            ul.navbar-nav.text-md-center.nav-justified.w-100
+              li.nav-item.active
+                a.nav-link(href='#')
+                  | Home 
+                  span.sr-only (current)
+              li.nav-item
+                a.nav-link(href='#') Projects
+              li.nav-item
+                a.nav-link(href='#') Services
+              li.nav-item
+                a.nav-link(href='#') Downloads
+              li.nav-item
+                a.nav-link(href='#') About
+              li.nav-item.dropdown
+                a#dropdown01.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
+                .dropdown-menu(aria-labelledby='dropdown01')
+                  a.dropdown-item(href='#') Action
+                  a.dropdown-item(href='#') Another action
+                  a.dropdown-item(href='#') Something else here
+      block content
+      
+      // Site footer
+      footer.footer
+        p © Company 2017
+    // /container
+    //
+      Bootstrap core JavaScript
+      ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='/javascripts/jquery-3.2.1.min.js')
+    script.
+      window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\\/script>')
+    script(src='/javascripts/popper.min.js')
+    script(src='/javascripts/bootstrap.min.js')
+    block customscript

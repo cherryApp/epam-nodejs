@@ -1,0 +1,9 @@
+{
+    "uid": "front",
+    "append": true,
+    "watch": true,
+    "script": "app.js",
+    "command": "node --inspect",
+    "minUptime": 1000,
+    "spinSleepTime": 1000
+}

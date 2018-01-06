@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  main(role='main')
+    .row
+      .col-12.justify-content-center.d-flex
+        form.col-6.col-xs-12(method='post')
+          each row in settings
+            .form-group
+              label= row.label
+              input.form-control(type= row.type, name= row.key, value= user[row.key])
+          button.btn.btn-primary(type='submit') Módosítás

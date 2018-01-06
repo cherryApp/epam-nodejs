@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  main(role='main')
+    table.table.table-striped
+      thead
+        tr
+          th #
+          th firstName
+          th lastName
+          th email
+          th 
+      tbody
+        each user in users
+          - link = "/users/details/"+user._id
+          - deleteLink = "/users/delete/"+user._id
+          tr
+            td= user._id
+            td= user.firstName
+            td= user.lastName
+            td= user.email
+            td
+              .btn-group
+                a.btn.btn-info(href= link) tovább
+                a.btn.btn-danger.delete-user-btn(href="#", data-id= user._id) törlés
+  
+block customscript
+  script(src="/javascripts/user.js")
+    
